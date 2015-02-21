@@ -6,7 +6,7 @@ gem 'capistrano-rails', '~> 1.1.1'
 
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
-
+gem 'therubyracer', :platforms => :ruby
 # Add this if you're using rvm
 # gem 'capistrano-rvm', github: "capistrano/rvm"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
