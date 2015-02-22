@@ -18,7 +18,12 @@ default: &default
   socket: /tmp/mysql.sock
 
 development:
-  <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: root
+  password: 
+  socket: /tmp/mysql.sock
   database: mariko_development
 
 # Warning: The database defined as "test" will be erased and
