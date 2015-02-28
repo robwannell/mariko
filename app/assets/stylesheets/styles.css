@@ -185,7 +185,7 @@ h2 {
 	background-color: #004F58;
 }
 
-.nav .active a { color: #fff; background:#004F58!important};
+.nav .active a { color: #fff; background:#004F58!important;
 }
 
 @media (max-width: 767px) {
