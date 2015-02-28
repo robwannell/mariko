@@ -26,14 +26,17 @@
 	
 	
 
-	<%= label_tag 'wishes', 'I would like to (please check all that apply):' %>
-		
-		   <%= f.check_box 'usename', label: 'Use my name as a supporter'  %>
-		   <%= f.check_box 'coffee', label: 'Host a coffee or house party for Mariko' %>
-		   <%= f.check_box 'lawnsign', label: 'Put a lawn sign in my yard' %>
+	
 		   
-		   <%= f.check_box 'GOTV', label: 'Help Get out the Vote on Election Day' %>
-		  
+		   
+		   <%= f.form_group :help, label: { text: "I would like to (please check all that apply):" } do %><br/>
+		    
+			<% @help.each do |item| %>
+			<div class="checkbox" style="margin-left:20px"><%= check_box_tag "help[]", item %> <%= item %></div>
+			 
+		   <% end %>
+		    <% end %>
+		
 		 
 		
 		 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
