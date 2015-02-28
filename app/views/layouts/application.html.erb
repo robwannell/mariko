@@ -1,24 +1,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mariko</title>
+  <title>Mariko Yamada for Senate 2016 <%= @title %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+ <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <a href="#Top"></a>
+	
 </head>
 <body>
-<ul>
-				<li <% if controller.controller_name == 'welcome' %>class = "menuon"<% end %> class="first"><%= link_to 'Home', :controller => 'welcome' %></li>
-				<li <% if controller.controller_name == 'about' %>class = "menuon"<% end %>><%= link_to 'About Us', :controller => 'about' %></li>
-				<li <% if controller.controller_name == 'endorsements' %>class = "menuon"<% end %>><%= link_to 'Endorsements', :controller => 'endorsements' %></li>
-				<li <% if controller.controller_name == 'support' %>class = "menuon"<% end %>><%= link_to 'Support', :controller => 'support' %></li>
-				<li <% if controller.controller_name == 'contact' %>class = "menuon"<% end %>><%= link_to 'Contact Us', :controller => 'contact' %></li>
-				
-				
-			
-				</ul>
+	<div class="wrapper">
+		
+	     
+	     
+	<div class="navbar navbar-inverse navbar-fixed-top" >
+	  <div class="container" style="background-color: #004F58;">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#"><%= image_tag "mylogo.png"%></a>
+	    </div>
+	    <div class="collapse navbar-collapse">
+	      <ul class="nav navbar-nav navbar-right ">
+	        <%= render '/layouts/nav.html.erb' %>
+	      </ul>
+	    </div><!--/.nav-collapse -->
+	  </div>
+	</div>
 	
-<%= yield %>
+	
+	<div class="container">
+		<div class="notices">
+<% if notice %>
+  <h2 class="alert alert-success"><%= notice %></h2>
+<% end %>
+<% if alert %>
+  <h2 class="alert alert-danger"><%= alert %></h2>
+<% end %>
+</div>
+	</div>
+	
+	
+	<div class="container pagecontainer">
+	
+		
+	<div class="jumbot">
+		 <%= yield :jumbot %>
+	 	</div>
+		
+		
+	<div class="container">
+		<div class="row">
+						<div class="col-md-8">
+							 <%= yield %>
+					 	</div>
+	 
+					     <div class="col-md-4">
+							  <%= yield :rhcolumn %>
+					     </div>
+		</div>
 
-</body>
+ 	</div>
+ 
+	 
+		 
+		 </div>
+	 </div> 
+  </div> <!-- /pagecontainer /-->
+	</div> <!-- /wrapper /-->
+
+ <div class="push"><!--//--></div>
+
+	<footer>
+      <div class="container">
+		  
+		 
+		  
+		  
+        <p class="copy">&copy; Mariko Yamada for Senate 2016</a> | Yamada for Assembly 2016 FPPC ID# ###### |  <%= render '/layouts/login_items.html.erb' %></p>
+      </div>
+    </footer>
+	  
+	</body>
 </html>

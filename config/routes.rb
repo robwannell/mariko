@@ -1,17 +1,24 @@
 Rails.application.routes.draw do
-  get 'contact/index'
+    
 
-  get 'support/index'
-
-  get 'endorsements/index'
-
-  get 'about/index'
+  devise_for :users
+  root 'welcome#index'
+ 
+  match '/send_mail', to: 'contact#send_mail', via: 'post'
+  match '/send_support_mail', to: 'support#send_support_mail', via: 'post'
+  
+  
+  get '/about', to: 'about#index'
+  get '/endorsements', to: 'endorsements#index'
+  get '/support', to: 'support#index'
+  get '/contact', to: 'contact#index'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -20,7 +27,7 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  #   resources :products
+     resources :endorsements
 
   # Example resource route with options:
   #   resources :products do

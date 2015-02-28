@@ -1,0 +1,196 @@
+/* CSS used here will be applied after bootstrap.css */
+
+body {
+	background-color: #043638;
+	
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato';
+}
+
+.wrapper {
+	background-color: #efefef;
+	padding-bottom: 20px;
+}
+
+.page {
+	background-color: #fff;
+	border:1px solid red;
+	
+}
+
+.pagecontainer {
+	background-color: #fff;
+	border:1px solid #ccc;
+	padding-top: 20px;
+	margin-top: 20px;
+}
+
+.pagecontainer h2{
+	color:#004F57;
+}
+
+.col-md-8{
+	padding:0 20px;
+}
+
+.col-md-4{
+	padding:20px 20px;
+}
+
+.notices {
+	
+}
+
+.push {
+	
+}
+footer {
+	color: #ccc;
+	padding: 20px 0;
+	
+}
+
+.bttop {
+	text-align:right;
+}
+
+a.btn-primary {
+	background: #FDCB7E;
+	color:#F2893D;
+	text-transform: uppercase;
+}
+
+footer .copy {
+	text-align: center;
+}
+
+
+
+.jumbotron{
+	padding: 250px 20px 0px 50px;
+}
+
+.jumbotron-welcome{
+	color:#fff;
+	margin-bottom: 10px;
+	
+	height:430px;
+	background-position:50% 45%;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("portrait2.jpg");
+}
+
+.jumbotron h2 {
+	text-transform:uppercase;
+	color: #fff;
+}
+
+h2 {
+	text-transform:inherit;
+	
+}
+.jumbotron-about{
+	color:#fff;
+	margin-bottom: 10px;
+	
+	height:430px;
+	background-position:50% 31%;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("vineyard.jpg");
+	background-repeat: no-repeat;
+	
+}
+
+.jumbotron-endorsements{
+	color:#fff;
+	margin-bottom: 10px;
+	
+	height:430px;
+	background-position:50% 22%;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("vet.jpg");
+	background-repeat: no-repeat;
+	
+}
+.jumbotron-support{
+	color:#fff;
+	margin-bottom: 10px;
+	
+	height:430px;
+	background-position:50% 35%;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("portrait.jpg");
+	background-repeat: no-repeat;
+	
+}
+
+.jumbotron-contact{
+	color:#fff;
+	margin-bottom: 10px;
+	
+	height:430px;
+	background-position:50% 45%;
+	text-shadow: black 0.1em 0.3em 0.3em !important;
+	background-image: url("portrait2.jpg");
+	background-repeat: no-repeat;
+	
+}
+
+
+.panel-default {
+	border: 0;
+}
+
+.panel-body {
+	border-bottom:0px solid #efefef;
+	
+}
+
+.panel-default > .panel-heading {
+  color: #333;
+  background-color: #fff;
+  border-bottom: 2px solid #F18B21;
+  margin-left: 15px;
+  text-transform:uppercase;
+  padding: 0 0 0 0px;
+  
+}
+
+
+.navbar{
+	background-color: #004F58;
+	border-bottom: 3px solid #F18B21;
+}
+
+.navbar-fixed-top {
+    min-height: 80px;
+	
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	
+}
+
+.nav .brand {
+	background-color: #004F58;
+}
+.nav {
+	background-color: #004F58;
+}
+
+.nav .active a { color: #fff; background:#004F58!important };
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+}

@@ -1,0 +1,13 @@
+<div class="container"
+
+><p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @endorsement.firstname %> <%= @endorsement.lastname %>
+</p>
+
+<%= link_to 'Edit', edit_endorsement_path(@endorsement) %> |
+<%= link_to 'Back', endorsements_path %>
+
+</div>

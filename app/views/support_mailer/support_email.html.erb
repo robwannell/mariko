@@ -1,0 +1,19 @@
+
+
+<DOCTYPE html>
+<html>
+    <head>
+        <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+        <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p>You have received the following Support HTML email from <%= "#{ @name } (#{ @email }):" %></p>
+        <p><%= @body %></p>
+		
+		<p><% if @usename %>Please use my name<% end%>
+		<p><% if @coffee %>I would like to host a coffee meeting<% end%>
+		<p><% if @lawnsign %>I would like to display a lawn sign<% end%>
+		<p><% if @gotv %>I want to help GOTV<% end%>
+    </body>
+</html>

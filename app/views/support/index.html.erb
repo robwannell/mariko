@@ -1,2 +1,55 @@
-<h1>Support#index</h1>
-<p>Find me in app/views/support/index.html.erb</p>
+    <% content_for :jumbot do %>
+		 <div class="jumbotron jumbotron-support">
+  			 <h1>Mariko Yamada</h1>
+        	 <h2>State Senate 2016<h2>
+			
+   		  </div>
+ <% end %>
+  
+
+
+
+
+
+     <h2>Support Marko's campaign</h2>
+	
+	 <p>Please fill in the form on this page to tell us a little about yourself. You will be contacted as needs arise throughout the campaign.  THANK YOU!</p>
+
+
+  <%= bootstrap_form_tag url: '/send_support_mail' do |f| %>
+    
+	<%= f.text_field :name, placeholder: 'Your name' %>
+	<%= f.email_field :email, placeholder: 'name@example.com' %>
+	<%= f.text_field :phone, placeholder: '916 555 0070' %>
+	<%= f.text_field :address, placeholder: 'Optional' %>
+	<%= f.text_area :comments, placeholder: 'Anything we should know?' %>
+	
+	
+
+	<%= label_tag 'wishes', 'I would like to (please check all that apply):' %>
+		
+		   <%= f.check_box 'usename', label: 'Use my name as a supporter'  %>
+		   <%= f.check_box 'coffee', label: 'Host a coffee or house party for Mariko' %>
+		   <%= f.check_box 'lawnsign', label: 'Put a lawn sign in my yard' %>
+		   
+		   <%= f.check_box 'GOTV', label: 'Help Get out the Vote on Election Day' %>
+		  
+		 
+		
+		 <%= f.submit "Send", class: "btn btn-default btn-about pull-right" %>
+	  
+	  
+	<% end %>
+	
+	
+
+
+	
+      
+     
+      	
+		
+		<% content_for :rhcolumn do %>
+  	<%= render "/layouts/support.html.erb"%>
+	 <%= render "/layouts/constantcontact.html.erb"%>
+	  <% end %>
