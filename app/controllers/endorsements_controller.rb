@@ -31,8 +31,8 @@ class EndorsementsController < ApplicationController
 
     respond_to do |format|
       if @endorsement.save
-        format.html { redirect_to @endorsement, notice: 'Endorsement was successfully created.' }
-        format.json { render :show, status: :created, location: @endorsement }
+        format.html { redirect_to endorsements_url, notice: 'Endorsement was successfully created.' }
+        format.json { render :new, status: :created, location: @endorsement }
       else
         format.html { render :new }
         format.json { render json: @endorsement.errors, status: :unprocessable_entity }
@@ -45,7 +45,7 @@ class EndorsementsController < ApplicationController
   def update
     respond_to do |format|
       if @endorsement.update(endorsement_params)
-        format.html { redirect_to @endorsement, notice: 'Endorsement was successfully updated.' }
+        format.html { redirect_to endorsements_url, notice: 'Endorsement was successfully updated.' }
         format.json { render :show, status: :ok, location: @endorsement }
       else
         format.html { render :edit }
@@ -72,7 +72,7 @@ class EndorsementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def endorsement_params
-      params.require(:endorsement).permit(:firstname, :lastname, :category)
+      params.require(:endorsement).permit(:title, :firstname, :lastname, :category, :organization, :rank)
       
     end
 end

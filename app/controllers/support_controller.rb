@@ -1,9 +1,9 @@
 class SupportController < ApplicationController
   def index
-    @help = ['Please use my name as a supporter', 'I would like to host a coffee or house party for Mariko', 'I would like to display a lawn sign', 'I want to help Get Out the Vote on election day']
+    @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Mariko', 'Make phone calls for Mariko','Walk precincts with Mariko', 'Display and/or deliver a lawn sign for Mariko', 'Help Get-Out-the-Vote']
   end
   
-  
+
   def send_support_mail
     
     

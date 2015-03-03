@@ -35,6 +35,9 @@ h1, h2, h3, h4, h5, h6 {
 .notices {
 	
 }
+.rh {
+	padding-top:15px;
+} 
 
 .push {
 	
@@ -191,6 +194,14 @@ h2 {
     padding-top: 10px;
     padding-bottom: 10px;}
 }
+
+footer h4 {
+	color:#fff;
+}
+
+footer .btn-primary {
+	background-color:#185557;
+}
 footer .facebook {
 	font-size: 1.1em;
 	
@@ -207,13 +218,30 @@ footer .facebook a:hover {
 	background-color: transparent;
 }
 
-
+footer .label {
+	background-color: #185557;
+}
 footer .label a {
-	color:#ff6600;
-	font-weight: bold;
+	color:#fff;
+	font-weight: normal;
 }
 
 footer .label a:hover {
-	color:#fff;
+	color:#ff6600;
 	background-color: transparent;
+	text-decoration: none;
 }
+
+#error_explanation {
+  color: red;
+  ul {
+    color: red;
+    margin: 0 0 30px 0;
+  }
+}
+
+.field_with_errors {
+ 
+    color: red
+  }
+

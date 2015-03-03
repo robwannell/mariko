@@ -1,1 +1,23 @@
 You have received the following email from <%= "#{ @name } (#{ @email }):" %>
+
+		<% if @name %>
+		Name: <%= "#{@name}" %>
+		<% end %>
+		
+		<% if @phone %>
+		Phone: <%= "#{@phone}" %>
+		<% end %>
+		
+		<% if @address %>
+		Address: <%= "#{@address}" %>
+		<% end %>
+		
+		<% if @body %>
+		Message: <%= "#{@body}" %>
+		<% end %>
+		
+		
+		<% if @help %>I would like to: <% end %>
+		<% @help.each do |help|%>
+		<%= "#{ help }" %>
+		<% end%>

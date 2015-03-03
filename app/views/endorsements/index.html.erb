@@ -15,15 +15,17 @@
 		  
 		<% @electeds.each do |e| %>
 		  
-		 <p><b>  <%= e.firstname %> <%= e.lastname %></b></p>
+		 <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %><% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+		  
+		  
 		  
 		 <% end %>
 		 
- 		 <h2>Organizations<h2> 
+ 		 <% unless @orgs.blank? %><h2>Organizations<h2> <% end %>
 		  
  		<% @orgs.each do |e| %>
 		  
- 		 <p><%= e.firstname %> <%= e.lastname %></p>
+ 		 <p><%= e.organization %> <% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
 		  
  		 <% end %>
 		 
@@ -31,13 +33,13 @@
 		  
  		<% @individuals.each do |e| %>
 		  
- 		 <p>  <%= e.firstname %> <%= e.lastname %></p>
+ 		 <p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
 		  
  		 <% end %>
 		
 		
 		
-		<p>  ... </p>
+	
 		
 		<p class="bttop"><%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %></p>
 		

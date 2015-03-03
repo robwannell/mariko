@@ -1,39 +1,53 @@
-<div class="col-md-10"><%= form_for(@endorsement,:html => { :class => "form-horizontal" }) do |f| %>
-  <% if @endorsement.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@endorsement.errors.count, "error") %> prohibited this endorsement from being saved:</h2>
-
-      <ul>
-      <% @endorsement.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="col-md-10"><%= bootstrap_form_for(@endorsement, label_errors: true, :html => { :class => "form-horizontal" }) do |f| %>
   
-
+ 
+  
+    <div class="formgroup">
+      	
+  			<div class="col-md-8 col-md-offset-2">
+      			<%= f.text_field :title, class: 'form-control', placeholder: "Title (optional)"%>
+   			</div>
+  	<div>
+		
   <div class="formgroup">
-    	<%= f.label :firstname, class: "col-md-4 control-label" %>
-			<div class="col-md-6">
+    	
+			<div class="col-md-8 col-md-offset-2">
     			<%= f.text_field :firstname, class: 'form-control', placeholder: "Firstname"%>
  			</div>
 	<div>
 		
 	    <div class="formgroup">
-	      	<%= f.label :lastname, class: "col-md-4 control-label" %>
-	  			<div class="col-md-6">
+	      	
+	  			<div class="col-md-8 col-md-offset-2">
 	      			<%= f.text_field :lastname, class: 'form-control', placeholder: "Lastname"%>
+	   			</div>
+	  	<div>
+			
+	    <div class="formgroup">
+	      	
+	  			<div class="col-md-8 col-md-offset-2">
+	      			<%= f.text_field :organization, class: 'form-control', placeholder: "Organization (optional - unless this entry is for an Organization)"%>
 	   			</div>
 	  	<div>
 
 	    <div class="formgroup">
-	      	<%= f.label :category, class: "col-md-4 control-label" %>
-	  			<div class="col-md-6">
+	      
+	  			<div class="col-md-8 col-md-offset-2">
 	      			
 					<%= f.select :category, ['Elected', 'Organization', 'Individual'] %>
 	   			</div>
 				
-	  	<div>
+	  	</div>
+		
+	    <div class="formgroup">
+	      	
+	  			<div class="col-md-8 col-md-offset-2">
+	      			<%= f.text_field :rank, class: 'form-control', placeholder: "Position for elected officals only. 0 is highest."%>
+	   			</div>
+	  	</div>
+		
+			</div>
+			
   
   <div class="form-group">
   <div class="col-sm-offset-9 col-sm-10">
