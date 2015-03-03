@@ -89,7 +89,32 @@
 		 
 		  
 		  
-        <p class="copy">&copy; Mariko Yamada for Senate 2016</a> | Yamada for Assembly 2016 FPPC ID# ###### |  <%= render '/layouts/login_items.html.erb' %></p>
+        
+		<div class="row">
+			<div class="col-md-4" >
+				<h3>Contact us</h3>
+		<b>Yamada for Senate 2016</b><br/>P.O. Box 528,<br/>
+		Sacramento, CA 95812<br/>
+		<abbr title="Phone">Tel: </abbr>707-533-4851<br/>
+		<abbr title="Fax">Fax: </abbr>530-759-0605<br/>
+		
+	</div>
+	
+	<div class="col-md-4" ><h3>Follow us on Facebook</h3>
+		<div class="facebook"><%= image_tag 'fb.png' %>  &nbsp;<%= link_to "Mariko's page on Facebook", 'http://facebook.com/assemblymember.yamada', target: "_blank" %></div>
+		</div>
+	
+	
+	<div class="col-md-4" >
+		<h3>Get in touch with Mariko</h3>
+		<%= link_to 'Send a message', contact_path, class: 'btn btn-primary', role: 'button'%>
+		</div>
+	</div>
+		
+		</div>
+		 
+		 <p class="copy">&copy; Mariko Yamada for Senate 2016 FPPC ID# 1353505 | <%= render '/layouts/login_items.html.erb' %></p>
+		
       </div>
     </footer>
 	  
