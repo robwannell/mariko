@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :users
   root 'welcome#index'
+ resources :contact, only: [:new, :create]
+ get '/contact', to: 'contact#new'
+ resources :support, only: [:new, :create]
+ get '/support', to: 'support#new'
+ 
  
   match '/send_mail', to: 'contact#send_mail', via: 'post'
   match '/send_support_mail', to: 'support#send_support_mail', via: 'post'
@@ -11,7 +16,6 @@ Rails.application.routes.draw do
   get '/about', to: 'about#index'
   get '/endorsements', to: 'endorsements#index'
   get '/support', to: 'support#index'
-  get '/contact', to: 'contact#index'
   
 
   # The priority is based upon order of creation: first created -> highest priority.

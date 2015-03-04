@@ -5,9 +5,12 @@ class EndorsementsController < ApplicationController
   # GET /endorsements
   # GET /endorsements.json
   def index
+    @title = "Endorsements"
+    
     @electeds = Endorsement.where(category: 'Elected') 
     @orgs = Endorsement.where(category: 'Organization')
     @individuals = Endorsement.where(category: 'Individual')
+    
   end
 
   # GET /endorsements/1

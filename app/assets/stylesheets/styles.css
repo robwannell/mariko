@@ -244,4 +244,13 @@ footer .label a:hover {
  
     color: red
   }
+  
+  form {
+	  margin-bottom: 10px;
+  }
 
+  label.required:after {
+	  font-size: 0.9em;
+	  color: #ff6600;
+    content:" *required";
+  }

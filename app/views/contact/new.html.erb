@@ -15,19 +15,23 @@
 		<h2>Contact Mariko</h2>
 	<p>Perhaps the easiest way to contact us is to use this form and we will respond as soon as possible.</p>
 
-
+	
 	   
-		<%= bootstrap_form_for @contact do |f| %>
-		  <%= f.label :name %>
+		<%= bootstrap_form_for @contact, url: {:action=>'create'} do |f| %>
+	
 		  <%= f.text_field :name %>
 
-		  <%= f.label :email %>
 		  <%= f.email_field :email %>
+	
+      	
+  			
+		  <%= f.text_area :body, label: 'Message', placeholder: 'Your message' %>
 
-		  <%= f.label :message %>
-		  <%= f.text_area :message %>
-
+      	
+  			
 		  <%= f.submit 'Submit', class: 'btn btn-default btn-about pull-right'%>
+	 
+
 		<% end %>
 	       
 	

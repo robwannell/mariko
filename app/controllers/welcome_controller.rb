@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   
   
   def index
-    @title = "| Welcome"
+    @title = "Welcome"
   
   end
 end
