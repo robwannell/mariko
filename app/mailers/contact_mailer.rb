@@ -1,4 +1,5 @@
 class ContactMailer < ActionMailer::Base
+  default from: 'notifier@yamadaforsenate.com'
     default to: "rob@meltemiweb.com"
 
     def contact_email(name, email, body)
@@ -6,6 +7,6 @@ class ContactMailer < ActionMailer::Base
         @email = email
         @body = body
 
-        mail(from: email, subject: 'Contact Request')
+        mail(subject: 'Contact Request')
     end
 end
