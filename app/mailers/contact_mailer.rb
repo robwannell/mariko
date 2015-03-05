@@ -1,6 +1,8 @@
 class ContactMailer < ActionMailer::Base
-  default from: 'notifier@yamadaforsenate.com'
-    default to: "rob@meltemiweb.com"
+  default from: 'notifier@yamadaforsenate.com',
+          reply_to: email
+  
+  default to: "rob@meltemiweb.com"
 
     def contact_email(name, email, body)
         @name = name
