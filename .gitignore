@@ -47,3 +47,7 @@ bower.json
 
 # Ignore pow environment settings
 .powenv
+
+/config/database.yml
+/config/initializers/devise.rb
+/config/initializers/setup_mail.rb
