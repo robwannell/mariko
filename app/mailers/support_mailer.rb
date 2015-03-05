@@ -1,5 +1,5 @@
 class SupportMailer < ActionMailer::Base
-    default to: "rob@meltemiweb.com"
+    default to: "robwannell@gmail.com"
 
     def support_email(name, email, phone, address, body, help)
         @name = name
