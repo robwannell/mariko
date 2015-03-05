@@ -6,7 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <p>You have received the following email from <%= "#{ @name } (#{ @email }):" %></p>
+        <p>The following is a message sent via yamadaforsenate.com from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %></p>
+		<p>
         <p><%= @body %></p>
     </body>
 </html>

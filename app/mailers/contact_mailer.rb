@@ -9,6 +9,6 @@ class ContactMailer < ActionMailer::Base
         @email = email
         @body = body
 
-        mail(subject: 'Contact Request', reply_to: email)
+        mail(subject: 'Contact message', reply_to: email)
     end
 end

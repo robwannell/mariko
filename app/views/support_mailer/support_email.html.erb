@@ -7,8 +7,10 @@
         <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <p>You have received the following Support email from the website:<b> <%= @email %></b></p>
+   <body>
+       <p>The following is a message sent via yamadaforsenate.com from <%= "#{ @name } #{ @email } at #{ Time.now.strftime('%F %T') }:" %></p>
+	<p>
+  
         
 		<% if @name %>
 		<p>Name: <%= @name %></p>

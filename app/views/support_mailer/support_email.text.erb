@@ -17,8 +17,8 @@ You have received the following email from <%= "#{ @name } (#{ @email }):" %>
 		<% end %>
 		
 		
-		<% unless @help.blank? %><p>I would like to: </p><% end %>
+		<% unless @help.blank? %><p>I would like to:<% end %>
 		<% unless @help.blank? %><% @help.each do |help|%>
-		<p><%= help %></p>
+		<%= help %>
 		<% end%>
 		<% end %>

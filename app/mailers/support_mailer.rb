@@ -1,6 +1,7 @@
 class SupportMailer < ActionMailer::Base
-    default to: "rob@meltemiweb.com"
-
+  default from: 'notifier@yamadaforsenate.com'
+  default to: "rob@meltemiweb.com"
+    
     def support_email(name, email, phone, address, body, help)
         @name = name
         @email = email
@@ -9,6 +10,7 @@ class SupportMailer < ActionMailer::Base
         @body = body
         @help = help
 
-        mail(from: email, subject: 'Support Request')
+        mail(from: email, subject: 'Support request', reply_to: email)
     end
 end
+
