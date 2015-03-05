@@ -4,7 +4,7 @@ ActionMailer::Base.smtp_settings = {
 :port => 26,
 :user_name => "mailer+meltemiweb.com",
 :password => "Meltemi808",
-:authentication => "plain",
+:authentication => "login",
 :enable_starttls_auto => true,
 :openssl_verify_mode => 'none'
 

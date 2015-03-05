@@ -25,9 +25,11 @@
 		<% if @body %>
 		<p>Message: <%= @body %></p>
 		<% end %>
-		<% if @help %><p>I would like to: </p><% end %>
-		<% @help.each do |help|%>
+		
+		<% unless @help.blank? %><p>I would like to: </p><% end %>
+		<% unless @help.blank? %><% @help.each do |help|%>
 		<p><%= help %></p>
 		<% end%>
+		<% end %>
     </body>
 </html>
