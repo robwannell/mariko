@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
-  default from: 'notifier@yamadaforsenate.com',
-          reply_to: email
+  default from: 'notifier@yamadaforsenate.com'
+          
   
   default to: "rob@meltemiweb.com"
 
@@ -9,6 +9,6 @@ class ContactMailer < ActionMailer::Base
         @email = email
         @body = body
 
-        mail(subject: 'Contact Request')
+        mail(subject: 'Contact Request', reply_to: email)
     end
 end
