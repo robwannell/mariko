@@ -49,5 +49,3 @@ bower.json
 .powenv
 
 /config/database.yml
-/config/initializers/devise.rb
-/config/initializers/setup_mail.rb
