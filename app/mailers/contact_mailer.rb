@@ -2,7 +2,7 @@ class ContactMailer < ActionMailer::Base
   default from: 'notifier@yamadaforsenate.com'
           
   
-  default to: "rob@meltemiweb.com"
+  default to: "info@yamadaforsenate.net"
 
     def contact_email(name, email, body)
         @name = name
