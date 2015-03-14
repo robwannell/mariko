@@ -254,3 +254,8 @@ footer .label a:hover {
 	  color: #ff6600;
     content:" *required";
   }
+  
+  ul.experience {
+	  margin-left:20px;
+	  padding-left:0;
+  }

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
     
 
+  get '/missives', to: 'missives#index'
+
   devise_for :users
   root 'welcome#index'
  resources :contact, only: [:new, :create]
