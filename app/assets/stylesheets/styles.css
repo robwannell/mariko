@@ -78,6 +78,7 @@ footer .copy {
 	
 	height:430px;
 	background-position:50% 45%;
+	background-size:cover;
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("welcome.jpg");
 }
@@ -97,6 +98,8 @@ h2 {
 	
 	height:430px;
 	background-position:50% 31%;
+	background-size:cover;
+	
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("about.jpg");
 	background-repeat: no-repeat;
@@ -109,6 +112,12 @@ h2 {
 	
 	height:430px;
 	background-position:50% 22%;
+	
+	
+	background-size:cover;
+	
+	
+	
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("endorsements.jpg");
 	background-repeat: no-repeat;
@@ -120,6 +129,7 @@ h2 {
 	
 	height:430px;
 	background-position:50% 35%;
+	background-size:cover;
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("support.jpg");
 	background-repeat: no-repeat;
@@ -132,6 +142,7 @@ h2 {
 	
 	height:430px;
 	background-position:50% 50%;
+	background-size:cover;
 	text-shadow: black 0.1em 0.3em 0.3em !important;
 	background-image: url("logo.png");
 	background-repeat: no-repeat;
@@ -173,13 +184,14 @@ h2 {
     padding-top: 0px;
     padding-bottom: 0px;
     line-height: 80px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	text-transform: uppercase;
 	
 }
 
 .nav .brand {
 	background-color: #004F58;
+	
 }
 .nav {
 	background-color: #004F58;
