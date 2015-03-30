@@ -234,6 +234,10 @@ footer .facebook a:hover {
 	background-color: transparent;
 }
 
+footer .twitter {
+	margin-top:10px;
+}
+
 footer .label {
 	background-color: #185557;
 }
@@ -275,9 +279,13 @@ footer .label a:hover {
 	  margin-left:20px;
 	  padding-left:0;
   }
-  
+ 
+ 
+ .calendar {
+	 padding-bottom:30px;
+ } 
   .calendar-header {
-	  background-color:#eee;
+	  background-color:#F4F9F9;
 	  text-align:center;
 	  font-size: 1.8em;
 	  padding:10px;
@@ -320,7 +328,7 @@ footer .label a:hover {
   }
   
   .next-month, .prev-month {
-	  background-color: #f2f2f2;
+	  background-color: #F4F9F9;
   }
   
 .event-img {
