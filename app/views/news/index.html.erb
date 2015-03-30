@@ -1,0 +1,29 @@
+
+
+<h1>Mariko's News & Views</h1>
+
+
+
+
+    <%  @news.each do |news| %>
+	<div class="newsitem">
+    <h2><%= link_to news.title, news %></h2>
+	<h5><%= news.created_at.strftime("%B %d %Y")%></h5>
+	<%= truncate(news.body, 
+  length: 250, 
+  separator: ' ', 
+  omission: '... ') {     
+    link_to "read more", news 
+} %>
+        </div>
+    
+    <% end %>
+  
+<div class="pagination">
+<%= will_paginate @news %>
+</div>
+
+		<% content_for :rhcolumn do %>
+  	<%= render "/layouts/support.html.erb"%>
+	 <%= render "/layouts/constantcontact.html.erb"%>
+	  <% end %>

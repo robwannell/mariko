@@ -7,8 +7,19 @@ gem 'capistrano-rails', '~> 1.1.1'
 # Add this if you're using rbenv
 gem 'capistrano-rbenv', github: "capistrano/rbenv"
 gem 'therubyracer', :platforms => :ruby
-gem 'devise', :git => 'https://github.com/plataformatec/devise.git', :branch => 'lm-rails-4-2'
+
 gem 'bootstrap_form'
+
+gem "sorcery"
+
+gem "paperclip", "~> 4.2"
+
+gem 'will_paginate', '~> 3.0.6'
+
+gem "simple_calendar", "~> 1.1.0"
+
+
+
 # Add this if you're using rvm
 # gem 'capistrano-rvm', github: "capistrano/rvm"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

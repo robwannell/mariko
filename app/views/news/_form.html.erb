@@ -1,0 +1,42 @@
+<%= bootstrap_form_for(@news) do |f| %>
+  <% if @news.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+      <ul>
+      <% @news.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+   
+    <%= f.text_field :title %>
+  </div>
+  
+  
+ <% unless @news.avatar.blank? %>
+ <p><b>Current image</b><br/><%= link_to (image_tag @news.avatar.url(:thumb)), @news.avatar.url(:standard), target: '_blank' %> </p><%= f.file_field :avatar, label: 'Add a new image'%></p>
+ <% else %>
+ <%= f.file_field :avatar, label: 'Add an image'%>
+ <% end %>
+  
+  <div class="field">
+   
+    <%= f.text_area :body, label: 'Article body', rows: '8'  %>
+  </div>
+  
+  
+  
+<div class="actions">
+  <div class="col-sm-offset-11">
+  <%= f.submit :Submit, class: 'btn btn-default'%>
+  </div>
+  
+<% end %>
+</div>
+
+
+  

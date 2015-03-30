@@ -11,29 +11,29 @@
 
 
 		  
-		 <h2>Public Officials<h2> 
+		 <h2>Public Officials</h2> 
 		  
 		<% @electeds.each do |e| %>
 		  
-		 <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %><% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
+		 <p> <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if current_user %>  <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %> </p>
 		  
 		  
 		  
 		 <% end %>
 		 
- 		 <% unless @orgs.blank? %><h2>Organizations<h2> <% end %>
+ 		 <% unless @orgs.blank? %><h2>Organizations</h2> <% end %>
 		  
  		<% @orgs.each do |e| %>
 		  
- 		 <p><%= e.organization %> <% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
+ 		 <p><%= e.organization %>  <% if current_user %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
 		  
  		 <% end %>
 		 
- 		 <h2>Individuals<h2> 
+ 		 <h2>Individuals</h2> 
 		  
  		<% @individuals.each do |e| %>
 		  
- 		 <p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %> <% if user_signed_in? %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
+ 		 <p>  <%= e.title %> <%= e.firstname %> <%= e.lastname %>  <% if current_user %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
 		  
  		 <% end %>
 		
@@ -50,7 +50,7 @@
   	<%= render "/layouts/support.html.erb"%>
 	 <%= render "/layouts/constantcontact.html.erb"%>
 	 
-	 <% if user_signed_in? %>
+	 <% if current_user %>
 
 	 <%= render "/layouts/endorsement_admin.html.erb"%>
 	

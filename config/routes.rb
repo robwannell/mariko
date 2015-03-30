@@ -1,9 +1,27 @@
 Rails.application.routes.draw do
     
 
+  resources :news
+
+  get '/admin', to:'admin#index'
+
+  resources :user_sessions
+  resources :users
+
+  get 'login' => 'user_sessions#new', :as => :login
+  match '/create', to: 'user_sessions#create', via: 'post'
+  post 'logout' => 'user_sessions#destroy', :as => :logout
+
+  
+
+  resources :events
+
   get '/missives', to: 'missives#index'
 
-  devise_for :users
+  
+  
+  
+  
   root 'welcome#index'
  resources :contact, only: [:new, :create]
  get '/contact', to: 'contact#new'

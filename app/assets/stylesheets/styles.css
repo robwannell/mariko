@@ -56,6 +56,8 @@ a.btn-primary {
 	background-color: #F2893D;
 	color:#fff;
 	text-transform: uppercase;
+	padding:7px;
+	margin-bottom:5px;
 }
 
 a.btn-primary:hover {
@@ -158,7 +160,9 @@ h2 {
 	border-bottom:0px solid #efefef;
 	
 }
-
+.panel-body h4 {
+	margin-top:0;
+}
 .panel-default > .panel-heading {
   color: #333;
   background-color: #fff;
@@ -271,3 +275,64 @@ footer .label a:hover {
 	  margin-left:20px;
 	  padding-left:0;
   }
+  
+  .calendar-header {
+	  background-color:#eee;
+	  text-align:center;
+	  font-size: 1.8em;
+	  padding:10px;
+	  margin-bottom:20px;
+  }
+  .calendar-header a{
+	  padding: 0 10px;
+  }
+  
+  .calendar th{
+	  color:#333;
+	  text-align:center;
+  }
+  
+  
+  .calendar td {
+	  border:5px solid #fff;
+	  color:#333;
+	  vertical-align: top;
+	  text-align:center;
+	  width: 120px;
+	  height: 100px;
+	  padding:10px;
+  }
+  
+  .day {
+  }
+  
+
+  .past {
+	  background-color: #F8FBFF;
+  }
+  
+  .wday-6, .wday-0{
+	  background-color: #FCE0CA;
+  }
+  
+  td.today {
+	  color: #ff6600;
+  }
+  
+  .next-month, .prev-month {
+	  background-color: #f2f2f2;
+  }
+  
+.event-img {
+	text-align:center;
+	margin-bottom:20px;
+}
+
+.newsitem {
+	margin-bottom:20px;
+}
+
+.pagination {
+	width:100%;
+	text-align:center;
+}

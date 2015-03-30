@@ -1,6 +1,6 @@
 class EndorsementsController < ApplicationController
-  before_action :authenticate_user!, :except => [:show, :index]
   before_action :set_endorsement, only: [:show, :edit, :update, :destroy]
+  before_filter :require_login, except: [:index]
 
   # GET /endorsements
   # GET /endorsements.json

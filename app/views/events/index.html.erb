@@ -1,0 +1,52 @@
+
+
+<h1>Events Calendar</h1>
+
+<p>Click on an event in the calendar for more info.
+
+
+
+<div class="calendar">
+	
+	
+	<%= month_calendar events: @events do |date, events| %>
+	  <%= date.strftime("%d") %>
+
+	  <% events.each do |event| %>
+	    <div>
+	      <%= link_to truncate(event.name, length: 13), event, class: "tag-tooltip",
+                    :data => {:toggle=>"tooltip"},
+                    'data-original-title' => event.name %>
+	    </div>
+	  <% end %>
+	<% end %>
+	
+</div>
+
+
+<% content_for :rhcolumn do %>
+
+<h2>Upcoming Events</h2><% if current_user %><%= link_to 'Add a New Event', new_event_path %><% end %>
+
+    <% @futureevents.each do |event| %>
+     <div class="eventlist">
+        <h3><%= link_to event.name, event  %></h3>
+        <h5><%= event.starts_at.strftime("%B %d - %I:%M %p") %></h5>
+        <p>Location: <%= event.location %></p>
+		<p><%= link_to 'More details', event, class: 'label label-warning'%>
+        
+		<% if current_user %>
+        <%= link_to 'Edit', edit_event_path(event) %>
+        | <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</div>
+    <% end %>
+
+
+<% end %>
+
+<script>
+$(document).on("ready page:change", function() {
+    $('.tag-tooltip').tooltip();
+});
+</script>

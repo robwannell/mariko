@@ -1,0 +1,47 @@
+<h1><%= @event.name %> </h1>
+<p class="lead">
+  <%= @event.starts_at.strftime("%B %d - %I:%M %p") %> <%= @event.location %> <% if current_user %>
+        <small><%= link_to 'Edit', edit_event_path(@event) %>
+        | <%= link_to 'Destroy', @event, method: :delete, data: { confirm: 'Are you sure?' } %> </small>
+		<% end %>
+</p>
+<% unless @event.avatar.blank?%>
+<div class="event-img">
+  <%= image_tag @event.avatar.url(:standard) %>
+</div>
+<% end %>
+
+
+  
+
+<p>
+  <% unless @event.details.blank?%>
+  <%= simple_format(@event.details.html_safe) %>
+  <% end %>
+</p>
+
+
+
+<%= link_to 'Back', events_path %>
+
+
+<% content_for :rhcolumn do %>
+
+<h2>Upcoming Events</h2><% if current_user %><%= link_to 'Add a New Event', new_event_path %><% end %>
+
+    <% @futureevents.each do |event| %>
+     <div class="eventlist">
+        <h3><%= link_to event.name, event  %></h3>
+        <h5><%= event.starts_at.strftime("%B %d - %I:%M %p") %></h5>
+        <p>Location: <%= event.location %></p>
+		<p><%= link_to 'More details', event, class: 'label label-warning'%>
+        
+		<% if current_user %>
+        <%= link_to 'Edit', edit_event_path(event) %>
+        | <%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %>
+		<% end %>
+	</div>
+    <% end %>
+
+
+<% end %>
