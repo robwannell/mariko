@@ -43,7 +43,7 @@
 		<% content_for :rhcolumn do %>
   	<%= render "/layouts/support.html.erb"%>
 	 <%= render "/layouts/constantcontact.html.erb"%>
-	 <% unless @news.title %><%= render "/layouts/blog.html.erb"%> <% end %>
+	 <% unless @news.title.blank? %><%= render "/layouts/blog.html.erb"%> <% end %>
 	  <% end %>
 	  
   
