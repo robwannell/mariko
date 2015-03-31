@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150327210732) do
+ActiveRecord::Schema.define(version: 20150331150908) do
 
   create_table "endorsements", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20150327210732) do
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
     t.text     "details",             limit: 65535
+    t.string   "slug",                limit: 255
   end
+
+  add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
 
   create_table "news", force: :cascade do |t|
     t.string   "title",               limit: 255
@@ -48,7 +51,10 @@ ActiveRecord::Schema.define(version: 20150327210732) do
     t.string   "avatar_content_type", limit: 255
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
+    t.string   "slug",                limit: 255
   end
+
+  add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",            limit: 255, null: false

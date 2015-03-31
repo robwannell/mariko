@@ -18,6 +18,7 @@ gem 'will_paginate', '~> 3.0.6'
 
 gem "simple_calendar", "~> 1.1.0"
 
+gem 'friendly_id'
 
 
 # Add this if you're using rvm

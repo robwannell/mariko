@@ -7,4 +7,9 @@ class Event < ActiveRecord::Base
      # Validate filename
      validates_attachment_file_name :avatar, :matches => [/png\Z/, /jpe?g\Z/]
     has_attached_file :avatar, :styles => { :standard => "800x600>", :thumb => "100x100>" }, :default_url => "/images/:style/missing.png"
+    
+    extend FriendlyId
+    friendly_id :name, use: :slugged
+    
+    
 end

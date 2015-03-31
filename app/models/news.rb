@@ -8,4 +8,8 @@ class News < ActiveRecord::Base
   
    default_scope  {order 'created_at DESC'}
    
+   extend FriendlyId
+   friendly_id :title, use: :slugged
+   
+   
 end
