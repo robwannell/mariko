@@ -14,12 +14,9 @@
 
 <h3><%= link_to article.title, article %></h3>
 <h5><%= article.created_at.strftime("%B %d %Y")%></h5>
-<p><%= truncate(article.body, 
-  length: 100, 
-  separator: ' ', 
-  omission: '... ') {     
-    link_to "read more", article 
-} %></p>
+<p><%= truncate(strip_tags(article.body), :length => 120, :escape => false )%>
+ <%=   link_to "read more", article %> 
+</p>
 <% end %>
 
 <p><%= link_to 'See all articles', news_index_url %>

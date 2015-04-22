@@ -1,11 +1,7 @@
     	<div class="panel panel-default">
       	<div class="panel-heading"><h4>Latest News</h4></div>
   		<div class="panel-body"><h4><%= link_to @news.title, news_url(@news) %></h4>
-				<%= truncate(@news.body, 
-			  length: 120, 
-			  separator: ' ', 
-			  omission: '... ') {     
-			    link_to "read more", news_url(@news) 
-			} %>
+				<%= truncate(strip_tags(@news.body), :length => 100, :escape => false )%>   
+			    <%= link_to "read more", news_url(@news)  %>
   		</div>
   	  </div>

@@ -9,12 +9,9 @@
 	<div class="newsitem">
     <h2><%= link_to news.title, news %></h2>
 	<h5><%= news.created_at.strftime("%B %d %Y")%></h5>
-	<%= truncate(news.body, 
-  length: 250, 
-  separator: ' ', 
-  omission: '... ') {     
+	<%= truncate(strip_tags(news.body), :length => 200, :escape => false )%> <%=     
     link_to "read more", news 
-} %>
+ %>
         </div>
     
     <% end %>
