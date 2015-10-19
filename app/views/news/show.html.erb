@@ -2,7 +2,7 @@
 <h5>Posted: <%= @news.created_at.strftime("%B %d %Y")%>  <% if current_user %><%= link_to 'Edit', edit_news_path(@news) %> | <%= link_to 'Destroy', @news, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></h5>
 
 <% unless @news.avatar.blank? %><div class="event-img"><%= image_tag @news.avatar.url(:standard)%></div><% end %>
-<%= simple_format @news.body %>
+<%= raw @news.body %>
 
 <p class="bttop"><%= link_to '<span class="glyphicon-class glyphicon glyphicon-chevron-up"></span> Back to top'.html_safe, '#Top' %></p>
 <%= link_to 'Back', news_index_path %>

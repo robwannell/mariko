@@ -5,6 +5,11 @@ class NewsController < ApplicationController
      "#{id} #{name}".parameterize
    end
    
+   def iframe_action
+       response.headers.delete "X-Frame-Options"
+       render_something
+     end
+   
   # GET /news
   # GET /news.json
   def index

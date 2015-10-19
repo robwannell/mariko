@@ -20,6 +20,9 @@ gem "simple_calendar", "~> 1.1.0"
 
 gem 'friendly_id'
 
+gem 'ckeditor'
+
+
 
 # Add this if you're using rvm
 # gem 'capistrano-rvm', github: "capistrano/rvm"

@@ -2,7 +2,7 @@ ActionMailer::Base.delivery_method = :smtp
 
 ActionMailer::Base.smtp_settings = {
   :user_name => 'notifier@yamadaforsenate.com',
-  :password => Rails.application.secrets.MAILER_PW,
+  :password => 'meltemi808',
   :domain => 'meltemiweb.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
