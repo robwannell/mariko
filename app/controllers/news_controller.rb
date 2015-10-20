@@ -13,6 +13,7 @@ class NewsController < ApplicationController
   # GET /news
   # GET /news.json
   def index
+    @metatag = Metatag.find(4)
     @news = News.paginate(:page => params[:page], :per_page => 5)
     
   end
@@ -20,6 +21,8 @@ class NewsController < ApplicationController
   # GET /news/1
   # GET /news/1.json
   def show
+    @newsmeta = News.friendly.find(params[:id])
+    @metatag = Metatag.find(4)  
     @articles = News.all.limit(5)
   end
 
@@ -80,6 +83,6 @@ class NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def news_params
-      params.require(:news).permit(:title, :body, :avatar)
+      params.require(:news).permit(:title, :body, :avatar, :meta)
     end
 end

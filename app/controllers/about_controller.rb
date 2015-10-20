@@ -1,5 +1,5 @@
 class AboutController < ApplicationController
   def index
-    @title = "About"
+    @metatag = Metatag.find(2)
   end
 end

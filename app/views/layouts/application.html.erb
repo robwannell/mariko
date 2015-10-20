@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mariko Yamada for Senate 2016 | <%= @title %></title>
+  <title>Mariko Yamada for Senate 2016 | <% unless @metatag.blank? %> <%= @metatag.pagetitle %> <% end %></title>
   <% unless @metatag.blank?%>
-  <meta name="description" content="<%= @metatag.description %>" />
+  <meta name="description" content="<% unless @newsmeta.meta.blank? %><%= @newsmeta.meta %><% else %><%= @metatag.description %> <% end %>" />
   <meta name="keywords" content="<%= @metatag.keywords %>" />
   <% end %>
   

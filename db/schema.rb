@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151020184955) do
+ActiveRecord::Schema.define(version: 20151020203416) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 20151020184955) do
     t.integer  "avatar_file_size",    limit: 4
     t.datetime "avatar_updated_at"
     t.string   "slug",                limit: 255
+    t.text     "meta",                limit: 65535
   end
 
   add_index "news", ["slug"], name: "index_news_on_slug", unique: true, using: :btree

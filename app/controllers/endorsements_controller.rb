@@ -5,7 +5,7 @@ class EndorsementsController < ApplicationController
   # GET /endorsements
   # GET /endorsements.json
   def index
-    @title = "Endorsements"
+    @metatag = Metatag.find(3)
     
     @electeds = Endorsement.where(category: 'Elected') 
     @orgs = Endorsement.where(category: 'Organization')
