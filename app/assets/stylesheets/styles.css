@@ -203,6 +203,18 @@ h2 {
 	background-color: #004F58;
 }
 
+.dropdown-toggle {
+	margin-bottom:-20px;
+}
+.dropdown-toggle {
+	background:transparent!important;
+}
+
+.dropdown-menu {
+	padding: 5px;
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
 .nav .active a { color: #fff; background:transparent!important;
 }
 
