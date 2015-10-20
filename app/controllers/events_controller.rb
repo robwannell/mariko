@@ -4,6 +4,7 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
+    @metatag = Metatag.find(6)
     @events = Event.all
     @futureevents = Event.where('starts_at >= ?', Date.today).order(:starts_at)
   end
@@ -11,6 +12,7 @@ class EventsController < ApplicationController
   # GET /events/1
   # GET /events/1.json
   def show
+    @metatag = Metatag.find(6)
     @events = Event.all
     @futureevents = Event.where('starts_at >= ?', Date.today).order(:starts_at)
   end

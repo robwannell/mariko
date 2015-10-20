@@ -1,6 +1,6 @@
 class ContactController < ApplicationController
   def new
-      @title ="Contact Mariko"
+      @metatag = Metatag.find(7)
       @contact = Contact.new
     end
 

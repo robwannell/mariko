@@ -2,7 +2,7 @@ class SupportController < ApplicationController
   def new
     @support = Support.new
     
-    @title = "Support Mariko"
+    @metatag = Metatag.find(5)
     @help = ['Add my name as an endorser', 'Host a "Meet-&-Greet" for Mariko', 'Make phone calls for Mariko','Walk precincts with Mariko', 'Display and/or deliver a lawn sign for Mariko', 'Help Get-Out-the-Vote']
   end
   
