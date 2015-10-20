@@ -182,14 +182,13 @@ h2 {
 }
 
 .navbar-fixed-top {
-    min-height: 80px;
+    min-height: 83px;
 	
 }
 
 .navbar-nav > li > a {
-    padding-top: 0px;
+    padding-top: 34px;
     padding-bottom: 0px;
-    line-height: 80px;
 	font-size: 1.1em;
 	text-transform: uppercase;
 	
@@ -203,16 +202,14 @@ h2 {
 	background-color: #004F58;
 }
 
-.dropdown-toggle {
-	margin-bottom:-20px;
-}
+
 .dropdown-toggle {
 	background:transparent!important;
 }
 
 .dropdown-menu {
 	padding: 5px;
-	font-size: 1.2em;
+	font-size: 1.1em;
 	text-transform: uppercase;
 }
 .nav .active a { color: #fff; background:transparent!important;
