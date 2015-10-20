@@ -3,7 +3,8 @@ class WelcomeController < ApplicationController
   
   
   def index
-    @title = "Welcome"
-  @news = News.first
+    @metatag = Metatag.find(1)
+    @title = @metatag.pagetitle
+    @news = News.first
   end
 end

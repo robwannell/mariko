@@ -1,0 +1,33 @@
+<%= bootstrap_form_for(@metatag) do |f| %>
+  <% if @metatag.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@metatag.errors.count, "error") %> prohibited this metatag from being saved:</h2>
+
+      <ul>
+      <% @metatag.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    
+    <%= f.text_field :pagetitle %>
+  </div>
+  <div class="field">
+  
+    <%= f.text_area :keywords %>
+  </div>
+  <div class="field">
+   
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <div class="col-sm-offset-11">
+    <%= f.submit :Submit, class: 'btn btn-default'%>
+    </div>
+	</div>
+	
+<% end %>
+

@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
     
 
+  resources :metatags
+
+  resources :media_pics
+
   mount Ckeditor::Engine => '/ckeditor'
   resources :news
 

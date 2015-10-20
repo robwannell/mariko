@@ -1,0 +1,28 @@
+
+
+<h1>Media</h1>
+<p>For media inquiries, please call <strong>Kate Maeder at Storefront Political Media</strong><br/>Office tel: <strong>415-834-0501 ext. 108</strong> cell phone: <strong>310-989-4299</strong></p>
+
+<p>Click on any image to view it in full size. Right-click / Control-click to 'download linked file as'.</p>
+
+    <% @media_pics.each do |media_pic| %>
+      <div class="mediapic">
+		  <% unless media_pic.image.blank? %>
+		  
+		  <div class="media-img"><%= link_to (image_tag media_pic.image.url(:standard)), media_pic.image.url(:original), target: '_blank' %></div><% end %>
+		  
+		 <h4> <%= media_pic.title %></h4>
+        
+      
+        
+		<% if current_user %><span class="badge"><%= media_pic.rank %></span> <%= link_to 'Edit', edit_media_pic_path(media_pic) %> | <%= link_to 'Destroy', media_pic, method: :delete, data: { confirm: 'Are you sure?' } %><% end %>
+       
+	   
+	  </div>
+    <% end %>
+
+
+
+<% content_for :rhcolumn do %>
+<% if current_user %><%= link_to 'Add New Media Pic', new_media_pic_path %><% end %>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @media_pic.title %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @media_pic.order %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @media_pic.image %>
+</p>
+
+<%= link_to 'Edit', edit_media_pic_path(@media_pic) %> |
+<%= link_to 'Back', media_pics_path %>

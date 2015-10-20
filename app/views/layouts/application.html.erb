@@ -3,6 +3,11 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mariko Yamada for Senate 2016 | <%= @title %></title>
+  <% unless @metatag.blank?%>
+  <meta name="description" content="<%= @metatag.description %>" />
+  <meta name="keywords" content="<%= @metatag.keywords %>" />
+  <% end %>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
@@ -32,6 +37,8 @@
   ga('send', 'pageview');
 
 </script>	
+  
+  
 </head>
 <body>
 	<div class="wrapper">

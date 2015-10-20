@@ -1,0 +1,33 @@
+<%= bootstrap_form_for(@media_pic) do |f| %>
+  <% if @media_pic.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@media_pic.errors.count, "error") %> prohibited this media pic from being saved:</h2>
+
+      <ul>
+      <% @media_pic.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   
+    <%= f.text_field :title %>
+  </div>
+  <div class="field"  >
+   
+    <%= f.number_field :rank, :label => 'Rank - lowest number appears first'%>
+  </div>
+ <% unless @media_pic.image.blank? %>
+ <p><b>Current image</b><br/><%= link_to (image_tag @media_pic.image.url(:thumb)), @media_pic.image.url(:standard), target: '_blank' %> </p><%= f.file_field :image, label: 'Add a new image'%></p>
+ <% else %>
+ <%= f.file_field :image, label: 'Add an image'%>
+ <% end %>
+  <div class="actions">
+    <div class="col-sm-offset-11">
+    <%= f.submit :Submit, class: 'btn btn-default'%>
+    </div>
+<% end %>
+
+</div>

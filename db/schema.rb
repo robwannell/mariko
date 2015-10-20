@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151014120854) do
+ActiveRecord::Schema.define(version: 20151020184955) do
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false
@@ -57,6 +57,25 @@ ActiveRecord::Schema.define(version: 20151014120854) do
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", unique: true, using: :btree
+
+  create_table "media_pics", force: :cascade do |t|
+    t.string   "title",              limit: 255
+    t.integer  "rank",               limit: 4
+    t.string   "image_file_name",    limit: 255
+    t.string   "image_content_type", limit: 255
+    t.integer  "image_file_size",    limit: 4
+    t.datetime "image_updated_at"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  create_table "metatags", force: :cascade do |t|
+    t.string   "pagetitle",   limit: 255
+    t.text     "keywords",    limit: 65535
+    t.text     "description", limit: 65535
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "news", force: :cascade do |t|
     t.string   "title",               limit: 255

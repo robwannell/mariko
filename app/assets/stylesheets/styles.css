@@ -18,6 +18,7 @@ h1, h2, h3, h4, h5, h6 {
 	background-color: #fff;
 	border:1px solid red;
 	
+	
 }
 
 .pagecontainer {
@@ -25,6 +26,7 @@ h1, h2, h3, h4, h5, h6 {
 	border:1px solid #ccc;
 	padding-top: 20px;
 	margin-top: 20px;
+	padding-bottom: 20px;
 }
 
 .pagecontainer h2{
@@ -347,4 +349,19 @@ footer .label a:hover {
 
 .constantcontactrw {
 	padding:20px;
+}
+
+.mediapic {
+	padding:20px 0;
+	text-align:center;
+}
+
+.mediapic h4 {
+	text-align:center;
+}
+
+.metatags {
+	background-color:#efefef;
+	padding:10px 20px;
+	margin-bottom: 20px;
 }

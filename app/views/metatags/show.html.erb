@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pagetitle:</strong>
+  <%= @metatag.pagetitle %>
+</p>
+
+<p>
+  <strong>Keywords:</strong>
+  <%= @metatag.keywords %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @metatag.description %>
+</p>
+
+<%= link_to 'Edit', edit_metatag_path(@metatag) %> |
+<%= link_to 'Back', metatags_path %>

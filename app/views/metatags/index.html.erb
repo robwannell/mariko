@@ -1,0 +1,25 @@
+
+
+<h1>Manage Metatags</h1>
+
+    <% @metatags.each do |metatag| %>
+	<div class="metatags">
+      <h4><%= metatag.pagetitle %> </h4>
+	  
+       <p><strong>Keywords: </strong><%= metatag.keywords %></p>
+       <p><strong>Description: </strong><%= metatag.description %></p>
+        
+        <p><span class="badge">Page ID <%= metatag.id %></span> <%= link_to 'Edit', edit_metatag_path(metatag) %> | <%= link_to 'Destroy', metatag, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div> 
+    <% end %>
+
+ 
+<% content_for :rhcolumn do %>
+
+
+
+<p>Here you can edit the tags for each of the pages.</p>
+<p>Enter comma separated tags only - no other characters are allowed.
+<p>For initial setup only: <%= link_to 'Add New Metatag', new_metatag_path %>
+
+<% end %>
