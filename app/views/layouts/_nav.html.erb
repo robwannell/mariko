@@ -11,6 +11,9 @@
 	        <li class="<%= 'active' if current_page?(endorsements_path) %>"><%= link_to 'Endorsements', endorsements_path %></li>
 			 <li class="<%= 'active' if current_page?(news_index_path) %>"><%= link_to "News & Views", news_index_path %></li>
 			<li class="<%= 'active' if current_page?(support_path) %>"><%= link_to 'Join Mariko', support_path %></li>
-			<li class="<%= 'active' if current_page?(events_path) %>"><%= link_to 'Events', events_path %></li>
-			<li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact Us', contact_path %></li>
+			
+			<li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact', contact_path %></li>
+			<span class="contribute_nav"><%= link_to 'Contribute', 'https://secure.actblue.com/contribute/page/yamadaforsenate', class: 'btn btn-primary contribute', role: 'button', target: '_blank'%> </span>
+			
+			
 			

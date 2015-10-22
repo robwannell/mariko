@@ -1,7 +1,7 @@
 
 
 <h1>Media</h1>
-<p>For media inquiries, please call <strong>Kate Maeder at Storefront Political Media</strong><br/>Office tel: <strong>415-834-0501 ext. 108</strong> cell phone: <strong>310-989-4299</strong></p>
+<p>For media inquiries, please call <strong>Kate Maeder at Storefront Political Media</strong><p><strong>Email:</strong> <%= mail_to "katem@storefrontpolitical.com" %></p>
 
 <p>Click on any image to view it in full size. Right-click / Control-click to 'download linked file as'.</p>
 
@@ -23,6 +23,12 @@
 
 
 
-<% content_for :rhcolumn do %>
-<% if current_user %><%= link_to 'Add New Media Pic', new_media_pic_path %><% end %>
+<% content_for :rhcolumn do %><%= render "/layouts/support.html.erb"%>
+	 <%= render "/layouts/constantcontact.html.erb"%>
+	 
+<% if current_user %>Admin only: <%= link_to 'Add New Media Pic', new_media_pic_path %><% end %>
 <% end %>
+
+		
+  	
+	  

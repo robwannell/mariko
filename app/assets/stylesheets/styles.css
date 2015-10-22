@@ -212,6 +212,11 @@ h2 {
 	font-size: 1.1em;
 	text-transform: uppercase;
 }
+
+.dropdown:hover .dropdown-menu {
+display: block;
+}
+
 .nav .active a { color: #fff; background:transparent!important;
 }
 
@@ -373,4 +378,18 @@ footer .label a:hover {
 	background-color:#efefef;
 	padding:10px 20px;
 	margin-bottom: 20px;
+}
+
+.contribute_nav {
+	float:left;
+	margin-top:25px;
+	margin-left:10px;
+}
+
+.contribute {
+	font-size:1.1em;
+}
+
+.join_campaign {
+	font-size:2.6em;
 }

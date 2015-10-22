@@ -4,6 +4,7 @@ class MediaPicsController < ApplicationController
   # GET /media_pics
   # GET /media_pics.json
   def index
+    @metatag = Metatag.find(8)
     @media_pics = MediaPic.all
   end
 
