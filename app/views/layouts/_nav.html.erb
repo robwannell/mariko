@@ -10,7 +10,17 @@
 			        </li>
 	        <li class="<%= 'active' if current_page?(endorsements_path) %>"><%= link_to 'Endorsements', endorsements_path %></li>
 			 <li class="<%= 'active' if current_page?(news_index_path) %>"><%= link_to "News & Views", news_index_path %></li>
-			<li class="<%= 'active' if current_page?(support_path) %>"><%= link_to 'Join Mariko', support_path %></li>
+			
+			<li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Join Mariko<span class="caret"></span></a>
+			          <ul class="dropdown-menu drops" role="menu">
+			            <li><%= link_to "Support Mariko", support_path %></li>
+						 
+			            <li ><%= link_to "Upcoming Events", events_path %></li>
+					
+			          </ul>
+			        </li>
+			
 			
 			<li class="<%= 'active' if current_page?(contact_path) %>"><%= link_to 'Contact', contact_path %></li>
 			<span class="contribute_nav"><%= link_to 'Contribute', 'https://secure.actblue.com/contribute/page/yamadaforsenate', class: 'btn btn-primary contribute', role: 'button', target: '_blank'%> </span>
