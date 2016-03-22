@@ -2,12 +2,19 @@
      <% content_for :jumbot do %>
  		 <div class="jumbotron jumbotron-endorsements">
    	<h1>Mariko Yamada</h1>
+	
          <h2>State Senate 2016<h2>
 			
      </div>
   <% end %>
 
-
+ 		 <% unless @orgs.blank? %><h2>Organizations</h2> <% end %>
+		  
+ 		<% @orgs.each do |e| %>
+		  
+ 		 <p><%= e.organization %>  <% if current_user %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
+		  
+ 		 <% end %>
 
 
 		  
@@ -21,13 +28,7 @@
 		  
 		 <% end %>
 		 
- 		 <% unless @orgs.blank? %><h2>Organizations</h2> <% end %>
-		  
- 		<% @orgs.each do |e| %>
-		  
- 		 <p><%= e.organization %>  <% if current_user %>   <%= link_to 'edit', edit_endorsement_path(e) %> |  <%= link_to 'delete', endorsement_path(e), :method => :delete, data: { confirm: ('messages.confirm_delete'), ok: ('buttons.ok'), cancel: ('buttons.cancel')} %><% end %></p>
-		  
- 		 <% end %>
+ 		
 		 
  		 <h2>Individuals</h2> 
 		  
@@ -58,3 +59,4 @@
 	 
 	 
 	  <% end %>
+	
