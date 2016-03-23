@@ -9,7 +9,7 @@
       <div class="mediapic">
 		  <% unless media_pic.image.blank? %>
 		  
-		  <div class="media-img"><%= link_to (image_tag media_pic.image.url(:standard)), media_pic.image.url(:original), target: '_blank' %></div><% end %>
+		  <div class="media-img"><%= link_to (image_tag media_pic.image.url(:standard), class: "img-responsive"), media_pic.image.url(:original), target: '_blank' %></div><% end %>
 		  
 		 <h4> <%= media_pic.title %></h4>
         

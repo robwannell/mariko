@@ -7,7 +7,7 @@
 </p>
 <% unless @event.avatar.blank?%>
 <div class="event-img">
-  <%= image_tag @event.avatar.url(:standard) %>
+  <%= image_tag @event.avatar.url(:standard), class: "img-responsive"%>
 </div>
 <% end %>
 
