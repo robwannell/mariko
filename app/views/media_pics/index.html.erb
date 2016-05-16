@@ -25,6 +25,7 @@
 
 <% content_for :rhcolumn do %><%= render "/layouts/support.html.erb"%>
 	 <%= render "/layouts/constantcontact.html.erb"%>
+	  <%= render "/layouts/issues.html.erb"%>
 	 
 <% if current_user %>Admin only: <%= link_to 'Add New Media Pic', new_media_pic_path %><% end %>
 <% end %>
