@@ -1,54 +1,58 @@
 
 
- 
-    <% content_for :jumbot do %>
-	
-		 <div class="jumbotron jumbotron-welcome">
-			 
-  	<h1>Mariko Yamada</h1>
-        <h2>State Senate 2016</h2>
-			
-    </div>
+
+<% content_for :jumbot do %>
+
+<div class="jumbotron jumbotron-welcome">
+
+<h1>Mariko Yamada</h1>
+<h2>State Senate 2016</h2>
+
+</div>
 
  <% end %>
-  
+
+
+
+<h2>In It to Win It!</h2>
+<p><%= link_to 'JOIN OUR CAMPAIGN!', support_path, class: 'btn btn-primary join_campaign', role:
+'button' %> </p>
+ <p>Dear Friends:</p> <p>Thanks to so many of you, we’re in the “Top Two” to be the next State Senator for the Third
+District—all of Napa and Solano, and parts of Contra Costa, Sacramento, Sonoma and Yolo counties. </p> <p>The stakes couldn’t be
+higher and the choices more clear.</p> <p>Throughout my 40 years in public service—as a lifelong Democrat, social worker, school
+volunteer, Yolo County Supervisor and State Assemblywoman who raised two daughters and cared for an aging parent—I’ve earned the
+reputation for always standing up for what’s right, not what’s easy.</p>
+
+<p>Over the past 18 months, together we’ve taken on the special corporate interests that spent millions to buy this seat. Our
+strong message to them: “This seat is NOT for sale”.</p>
+
+<p>Serving for six years in the California Assembly from 2008 to 2014 was a high honor for me. Together we survived those
+difficult years, but there are still many challenges ahead that will require experienced and energetic leadership. We must boost
+our economy and protect small businesses and the lives of working people whose labor supports it. We must also ensure that the
+promises made for a secure retirement are kept fair for all Californians, and ensure that care is accessible for the most
+vulnerable in our State. I have always put Main Street ahead of Wall Street, and I always will.</p>
+
+<p>I am the candidate who will fight to protect retirements by increasing penalties on financial institutions that engage in
+fraud against seniors, invest in childcare and universal preschool, and address student debt and veteran’s services. </p>
+
+<p>Election Day is Tuesday, November 8, 2016. Your endorsement and a contribution of any amount will help share our message.
+Principled leaders like Congressman John Garamendi, Insurance Commissioner Dave Jones, State Controller Betty Yee, EMILY’s LIST,
+the California League of Conservation Voters, and California Federation of Teachers are on my team. Join me, and  	<%= link_to 'sign up to
+receive updates on my campaign for State Senate here', 'http://visitor.constantcontact.com/d.jsp?m=1101795480971&p=oi', target: '_blank'%>. </p>
+
+<p>Thank you for your consideration, because “We’ve got work to do!”</p>
+
+<p>Sincerely,</p> <%= image_tag 'sig.jpg'%> <h4>Mariko Yamada</h4>
 
 
 
 
-  
-        <h2>Our Big News…Running for Senate!</h2>
-		<p><%= link_to 'JOIN OUR CAMPAIGN!', support_path,  class: 'btn btn-primary join_campaign', role: 'button' %> </p>
-		
-        <p>Dear Friends:</p>
 
-<p>Through some of our State’s most difficult times, Californians pulled together and persevered through years of brutal budgets and shared sacrifice.  Thanks to the voters, tools like the simple majority budget, temporary taxes, and a rainy day fund, we’re breaking down the “wall-of-debt” that threatened our state’s economy, paying back what we owe to schools, and making a comeback.</p>
 
-<p>Yet, our recovery has been uneven and inequitable.  Too many are out-of-work; our social and public safety net is tattered; higher education and healthcare costs continue to rise; and the fourth consecutive year of drought and climate change threaten our multi-billion dollar farm industry. We have the highest poverty rate in the Nation - children, the elderly, and those with disabilities, including veterans, are especially hard hit.</p>
 
-<p>Serving for six years in the California Assembly has been a high honor.  Together we survived those difficult years, but there are still many challenges ahead that will require experienced and energetic leadership.  We must boost our economy and protect small businesses and the lives of working people whose labor supports it.  We must also ensure that the promises made for a secure retirement are kept fair for all Californians, and ensure that care is accessible for the most vulnerable Californians.</p>
-
-<p>That’s why I am a candidate for the Third District in the California State Senate.  As a professional social worker for over four decades, my background, training, and commitment to equity have prepared me well to take on these challenges on your behalf.  I am excited to do this work and would be honored to have your support.</p>
-
-<p>General Election Day is Tuesday, November 8, 2016.  Your early endorsement and a contribution of any amount will help share our message.</p>
-
-<p>Thank you for your past support and encouragement.  I’m ready to run because “We’ve got work to do!”</p>
-
-<p>Sincerely,</p>
-<%= image_tag 'sig.jpg'%>
-        <h4>Mariko Yamada</h4>
-	
-		
-  
-     
-      	
-		
 		<% content_for :rhcolumn do %>
   	<%= render "/layouts/support.html.erb"%>
 	 <%= render "/layouts/constantcontact.html.erb"%>
 	 <% unless @news.title.blank? %><%= render "/layouts/blog.html.erb"%> <% end %>
 	  <%= render "/layouts/issues.html.erb"%>
 	  <% end %>
-	  
-	  
-  
